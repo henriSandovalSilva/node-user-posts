@@ -23,3 +23,7 @@ Uma API que lista usuários de empresas e seus posts.
 `yarn dev:server`<br>
 
 A API irá executar em: [http://localhost:3333](http://localhost:3333)
+
+## :memo: Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
