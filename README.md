@@ -18,11 +18,17 @@ Uma API que lista usuários de empresas e seus posts.
 
 <h2>:question: Instruções para testar o projeto</h2>
 
-`yarn`
+`git clone https://github.com/henriSandovalSilva/node-user-posts.git`
 
-`yarn dev:server`<br>
+`cd node-user-posts`<br>
 
-A API irá executar em: [http://localhost:3333](http://localhost:3333)
+`yarn`<br>
+
+`yarn tsc`<br>
+
+`docker-compose up -d`<br>
+
+A API irá executar em: [http://localhost](http://localhost)
 
 ## :memo: Licença
 
