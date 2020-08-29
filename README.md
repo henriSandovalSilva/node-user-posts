@@ -18,6 +18,8 @@ Uma API que lista usuários de empresas e seus posts.
 
 <h2>:question: Instruções para testar o projeto</h2>
 
+Pré-requisitos: Docker, Docker Compose, Node.js 12.x, Yarn
+
 `git clone https://github.com/henriSandovalSilva/node-user-posts.git`
 
 `cd node-user-posts`<br>
@@ -29,6 +31,8 @@ Uma API que lista usuários de empresas e seus posts.
 `docker-compose up -d`<br>
 
 A API irá executar em: [http://localhost](http://localhost)
+
+A API está rodando na Digital Ocean em: http://161.35.4.231/
 
 ## :memo: Licença
 
