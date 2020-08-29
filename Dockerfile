@@ -22,7 +22,7 @@ RUN npm install -g pm2
 
 # NGINX
 RUN rm /etc/nginx/sites-available/default
-ADD ./default /etc/nginx/sites-available/default
+ADD ./.default /etc/nginx/sites-available/default
 
 # RUN
 EXPOSE 80
