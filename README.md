@@ -37,6 +37,8 @@ Pré-requisitos:
 
 `yarn tsc`<br>
 
+`cp .default.example .default`<br>
+
 `docker-compose up -d`<br>
 
 A API irá executar em: [http://localhost](http://localhost)
