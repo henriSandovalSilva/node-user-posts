@@ -8,6 +8,11 @@
   <li>Express.js</li>
   <li>Typescript</li>
   <li>Axios</li>
+  <li>PM2</li>
+  <li>Digital Ocean</li>
+  <li>Docker</li>
+  <li>Docker Compose</li>
+  <li>Nginx</li>
   <li>Repository Pattern</li>
   <li>ESLint + Prettier + EditorConfig</li>
 </ul>
@@ -18,11 +23,25 @@ Uma API que lista usuários de empresas e seus posts.
 
 <h2>:question: Instruções para testar o projeto</h2>
 
-`yarn`
+Pré-requisitos: 
+ <a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank">Docker</a>, 
+<a href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose</a>, 
+<a href="https://github.com/nodesource/distributions/blob/master/README.md#debinstall" target="_blank">Node.js 12.x</a>, 
+<a href="https://classic.yarnpkg.com/pt-BR/docs/install/#debian-stable" target="_blank">Yarn</a>
 
-`yarn dev:server`<br>
+`git clone https://github.com/henriSandovalSilva/node-user-posts.git`
 
-A API irá executar em: [http://localhost:3333](http://localhost:3333)
+`cd node-user-posts`<br>
+
+`yarn`<br>
+
+`yarn tsc`<br>
+
+`docker-compose up -d`<br>
+
+A API irá executar em: [http://localhost](http://localhost)
+
+A API está rodando na <b>Digital Ocean</b> em: http://161.35.4.231/
 
 ## :memo: Licença
 
