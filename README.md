@@ -21,6 +21,11 @@
 
 Uma API que lista usuários de empresas e seus posts.
 
+<h2>💻 Endpoints </h2>
+
+`/users/[companyName]`<br>
+`/users/[userId]/posts`<br>
+
 <h2>:question: Instruções para testar o projeto</h2>
 
 Pré-requisitos: 
