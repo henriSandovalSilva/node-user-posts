@@ -2,7 +2,7 @@ server {
     listen 80 default_server;
     listen [::]:80 default_server;
 
-    server_name usersposts.tech;
+    server_name api.usersposts.tech;
 
     location / {
         proxy_pass http://localhost:3333;
