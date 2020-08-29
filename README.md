@@ -32,7 +32,7 @@ Pré-requisitos: Docker, Docker Compose, Node.js 12.x, Yarn
 
 A API irá executar em: [http://localhost](http://localhost)
 
-A API está rodando na Digital Ocean em: http://161.35.4.231/
+A API está rodando na <b>Digital Ocean</b> em: http://161.35.4.231/
 
 ## :memo: Licença
 
