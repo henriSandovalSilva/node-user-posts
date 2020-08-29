@@ -8,6 +8,11 @@
   <li>Express.js</li>
   <li>Typescript</li>
   <li>Axios</li>
+  <li>PM2</li>
+  <li>Digital Ocean</li>
+  <li>Docker</li>
+  <li>Docker Compose</li>
+  <li>Nginx</li>
   <li>Repository Pattern</li>
   <li>ESLint + Prettier + EditorConfig</li>
 </ul>
