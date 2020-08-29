@@ -14,6 +14,7 @@ RUN apt-get install -y npm
 # YARN
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+RUN apt-get update
 RUN apt-get install -y --no-install-recommends yarn
 
 # PM2
@@ -23,8 +24,12 @@ RUN npm install -g pm2
 RUN rm /etc/nginx/sites-available/default
 ADD ./default /etc/nginx/sites-available/default
 
-# BUILD
-# WORKDIR /var/www/html/node-user-posts/
+# SSL
+RUN wget https://dl.eff.org/certbot-auto
+RUN mv certbot-auto /usr/local/bin/certbot-auto
+RUN chown root /usr/local/bin/certbot-auto
+RUN chmod 0755 /usr/local/bin/certbot-auto
+RUN /usr/local/bin/certbot-auto
 
 # RUN
 EXPOSE 80
