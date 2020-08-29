@@ -21,6 +21,11 @@
 
 Uma API que lista usuários de empresas e seus posts.
 
+<h2>:arrows_counterclockwise: Endpoints </h2>
+
+`/users/[companyName]`<br>
+`/users/[userId]/posts`<br>
+
 <h2>:question: Instruções para testar o projeto</h2>
 
 Pré-requisitos: 
@@ -37,11 +42,15 @@ Pré-requisitos:
 
 `yarn tsc`<br>
 
+`cp .default.example .default`<br>
+
 `docker-compose up -d`<br>
 
 A API irá executar em: [http://localhost](http://localhost)
 
 A API está rodando na <b>Digital Ocean</b> em: http://api.usersposts.tech/
+
+Agora é necessário seguir as instruções do [frontend](https://github.com/henriSandovalSilva/react-user-posts).
 
 ## :memo: Licença
 
