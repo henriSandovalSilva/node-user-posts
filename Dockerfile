@@ -3,7 +3,7 @@ FROM ubuntu:latest
 # DEPENDENCIES
 RUN apt-get update
 RUN apt-get install software-properties-common -y
-RUN apt-get install -y nginx curl git && apt-get clean
+RUN apt-get install -y nginx curl git wget && apt-get clean
 
 # NODE
 RUN curl -sL https://deb.nodesource.com/setup_12.x
