@@ -21,7 +21,7 @@
 
 Uma API que lista usuários de empresas e seus posts.
 
-<h2>💻 Endpoints </h2>
+<h2>:arrows_counterclockwise: Endpoints </h2>
 
 `/users/[companyName]`<br>
 `/users/[userId]/posts`<br>
