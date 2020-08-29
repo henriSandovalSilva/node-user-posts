@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:latest
 
 # DEPENDENCIES
 RUN apt-get update
@@ -23,13 +23,6 @@ RUN npm install -g pm2
 # NGINX
 RUN rm /etc/nginx/sites-available/default
 ADD ./default /etc/nginx/sites-available/default
-
-# SSL
-RUN wget https://dl.eff.org/certbot-auto
-RUN mv certbot-auto /usr/local/bin/certbot-auto
-RUN chown root /usr/local/bin/certbot-auto
-RUN chmod 0755 /usr/local/bin/certbot-auto
-RUN /usr/local/bin/certbot-auto
 
 # RUN
 EXPOSE 80
