@@ -45,6 +45,8 @@ A API irá executar em: [http://localhost](http://localhost)
 
 A API está rodando na <b>Digital Ocean</b> em: http://api.usersposts.tech/
 
+Agora é necessário seguir as instruções do [frontend](https://github.com/henriSandovalSilva/react-user-posts).
+
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
