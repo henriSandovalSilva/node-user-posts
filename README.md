@@ -41,7 +41,7 @@ Pré-requisitos:
 
 A API irá executar em: [http://localhost](http://localhost)
 
-A API está rodando na <b>Digital Ocean</b> em: http://161.35.4.231/
+A API está rodando na <b>Digital Ocean</b> em: http://api.usersposts.tech/
 
 ## :memo: Licença
 
