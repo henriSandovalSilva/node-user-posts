@@ -8,6 +8,7 @@
   <li>Express.js</li>
   <li>Typescript</li>
   <li>Axios</li>
+  <li>Jest</li>
   <li>PM2</li>
   <li>Digital Ocean</li>
   <li>Docker</li>
