@@ -42,6 +42,8 @@ Pré-requisitos:
 
 `yarn`<br>
 
+`yarn test`<br>
+
 `yarn tsc`<br>
 
 `cp .default.example .default`<br>
