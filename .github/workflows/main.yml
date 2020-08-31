@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+        
+    - name: Install dependencies
+      run: yarn install
+    
+    # - name: Run tests
+    #   run: yarn test --watchAll false
+    
+    - name: Build
+      run: yarn tsc
+    
+    - name: Copy files to Digital Ocean
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        port: ${{ secrets.SSH_PORT }}
+        key: ${{ secrets.SSH_KEY }}
+        source: "dist/*"
+        target: "/var/www/html/node-user-posts/dist/"
+    
+    - name: Restart Node.js server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        port: ${{ secrets.SSH_PORT }}
+        key: ${{ secrets.SSH_KEY }}
+        script: docker exec -it node-user-posts_api_1 pm2 restart server
