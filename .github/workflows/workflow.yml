@@ -42,4 +42,4 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         port: ${{ secrets.SSH_PORT }}
         key: ${{ secrets.SSH_KEY }}
-        script: docker exec -it node-user-posts_api_1 pm2 restart server
+        script: docker exec node-user-posts_api_1 pm2 restart server
