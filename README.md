@@ -13,6 +13,7 @@
   <li>Docker</li>
   <li>Docker Compose</li>
   <li>Nginx</li>
+  <li>GitHub Actions</li>
   <li>Repository Pattern</li>
   <li>ESLint + Prettier + EditorConfig</li>
 </ul>
