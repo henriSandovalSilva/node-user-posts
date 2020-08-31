@@ -1,23 +1,23 @@
-interface Address {
+interface IAddress {
   street: string;
   suite: string;
   city: string;
   zipcode: string;
-  geo: AddressGeo;
+  geo: IAddressGeo;
 }
 
-interface AddressGeo {
+interface IAddressGeo {
   lat: string;
   lng: string;
 }
 
-interface Company {
+interface ICompany {
   name: string;
   catchPhrase: string;
   bs: string;
 }
 
-class User {
+class IUser {
   id: number;
 
   name: string;
@@ -26,23 +26,23 @@ class User {
 
   email: string;
 
-  address: Address;
+  address: IAddress;
 
   phone: string;
 
   website: string;
 
-  company: Company;
+  company: ICompany;
 
   constructor(
     id: number,
     name: string,
     username: string,
     email: string,
-    address: Address,
+    address: IAddress,
     phone: string,
     website: string,
-    company: Company,
+    company: ICompany,
   ) {
     this.id = id;
     this.name = name;
@@ -55,4 +55,4 @@ class User {
   }
 }
 
-export default User;
+export default IUser;

@@ -1,4 +1,4 @@
-class Post {
+class IPost {
   id: number;
 
   title: string;
@@ -15,4 +15,4 @@ class Post {
   }
 }
 
-export default Post;
+export default IPost;

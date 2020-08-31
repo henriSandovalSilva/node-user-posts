@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-import User from '../entities/User';
+import IUser from '../entities/User';
 
 class UsersRepository {
-  public async findUser(userId: number): Promise<User | undefined> {
+  public async findUser(userId: number): Promise<IUser | undefined> {
     const user = await axios.get(
       `http://jsonplaceholder.typicode.com/users/${userId}`,
     );
@@ -11,7 +11,7 @@ class UsersRepository {
     return user.data || undefined;
   }
 
-  public async findUsers(): Promise<User[] | undefined> {
+  public async findUsers(): Promise<IUser[] | undefined> {
     const users = await axios.get('http://jsonplaceholder.typicode.com/users');
 
     return users.data || undefined;

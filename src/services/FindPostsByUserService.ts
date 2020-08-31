@@ -1,16 +1,16 @@
-import User from '../entities/User';
-import Post from '../entities/Post';
+import IUser from '../entities/User';
+import IPost from '../entities/Post';
 
 import UsersRepository from '../repositories/UsersRepository';
 import PostsRepository from '../repositories/PostsRepository';
 
-interface PostResponse {
-  post: Post;
-  user: User;
+interface IPostResponse {
+  post: IPost;
+  user: IUser;
 }
 
 class FindPostsByUserService {
-  public async execute(userId: number): Promise<PostResponse[] | undefined> {
+  public async execute(userId: number): Promise<IPostResponse[] | undefined> {
     const user = await UsersRepository.findUser(userId);
 
     if (user) {
@@ -18,11 +18,11 @@ class FindPostsByUserService {
 
       if (posts) {
         const postsFiltered = posts
-          .filter((post: Post): boolean => {
+          .filter((post: IPost): boolean => {
             return user.id === post.userId;
           })
           .map(
-            (post: Post): PostResponse => {
+            (post: IPost): IPostResponse => {
               return {
                 post,
                 user,

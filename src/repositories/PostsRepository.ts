@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-import Post from '../entities/Post';
+import IPost from '../entities/Post';
 
 class PostsRepository {
-  public async findPosts(): Promise<Post[] | undefined> {
+  public async findPosts(): Promise<IPost[] | undefined> {
     const posts = await axios.get('http://jsonplaceholder.typicode.com/posts');
 
     return posts.data || undefined;
