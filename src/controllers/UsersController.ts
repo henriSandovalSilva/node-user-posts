@@ -9,18 +9,23 @@ class UsersController {
       request.params.companyName,
     );
 
-    response.json(users);
+    if (users) {
+      response.json(users);
+    }
+
+    response.status(404).json({});
   }
 
   public async listUserPosts(request: Request, response: Response) {
-    const users = await FindPostsByUserService.execute(
-      parseInt(
-        request.params.userId.substring(request.params.userId.length - 1),
-        10,
-      ),
+    const usersPosts = await FindPostsByUserService.execute(
+      parseInt(request.params.userId.toString(), 10),
     );
 
-    response.json(users);
+    if (usersPosts) {
+      response.json(usersPosts);
+    }
+
+    response.status(404).json({});
   }
 }
 

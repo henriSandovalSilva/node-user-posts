@@ -11,7 +11,9 @@ class FindUsersByCompanyService {
         (user: IUser): boolean => user.company.name === company,
       );
 
-      return usersFiltered;
+      if (usersFiltered.length > 0) {
+        return usersFiltered;
+      }
     }
 
     return undefined;

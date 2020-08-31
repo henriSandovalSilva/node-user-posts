@@ -4,17 +4,27 @@ import IUser from '../entities/User';
 
 class UsersRepository {
   public async findUser(userId: number): Promise<IUser | undefined> {
-    const user = await axios.get(
-      `http://jsonplaceholder.typicode.com/users/${userId}`,
-    );
+    try {
+      const user = await axios.get(
+        `http://jsonplaceholder.typicode.com/users/${userId}`,
+      );
 
-    return user.data || undefined;
+      return user.data || undefined;
+    } catch (e) {
+      return undefined;
+    }
   }
 
   public async findUsers(): Promise<IUser[] | undefined> {
-    const users = await axios.get('http://jsonplaceholder.typicode.com/users');
+    try {
+      const users = await axios.get(
+        'http://jsonplaceholder.typicode.com/users',
+      );
 
-    return users.data || undefined;
+      return users.data || undefined;
+    } catch (e) {
+      return undefined;
+    }
   }
 }
 
