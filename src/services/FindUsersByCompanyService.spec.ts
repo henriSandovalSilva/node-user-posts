@@ -9,7 +9,7 @@ describe('FindUsersByCompanyService', () => {
     }
   });
 
-  it('should not be able to find a posts of invalid user', async () => {
+  it('should not be able to find a user of invalid company', async () => {
     const users = await FindUsersByCompanyService.execute(
       'CompanyTestNonExistent',
     );
