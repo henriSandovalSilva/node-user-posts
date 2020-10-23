@@ -52,8 +52,6 @@ Pré-requisitos:
 
 A API irá executar em: [http://localhost](http://localhost)
 
-A API está rodando na <b>Digital Ocean</b> em: http://api.usersposts.tech/
-
 Agora é necessário seguir as instruções do [frontend](https://github.com/henriSandovalSilva/react-user-posts).
 
 ## :memo: Licença
